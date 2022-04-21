@@ -134,7 +134,7 @@ const CreatePin = ({ user }) => {
                         )}
                     </div>
                 </div>
-                <div className="flex flex-1 flex-col gap-6 lg:l-5 mt-5 w-full">
+                <div className="flex flex-1 flex-col gap-6 lg:l-5 mt-5 w-full xl:ml-10 lg:ml-5">
                     <input
                         className="outline-none text-2xl sm:text-3xl font-bold border-b-2 border-gray-200 p-2"
                         type="text"
