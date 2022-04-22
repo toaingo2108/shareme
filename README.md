@@ -1,4 +1,5 @@
 # Shareme
+### 👉 If you like this project, give it a star ✨ and share 👨🏻‍💻 it to your friends 👈
 
 A platform for anime lovers
 
@@ -36,5 +37,3 @@ website: [sharememe.netlify.app/](https://sharememe.netlify.app/)
 - Run `npm install`
 
 - Example .env file: See [env](.env)
-
-### 👉 If you like this project, give it a star ✨ and share 👨🏻‍💻 it to your friends 👈
