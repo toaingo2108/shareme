@@ -140,7 +140,7 @@ const PinDetail = ({ user }) => {
                             className="flex items-center">
                             <img
                                 className="w-10 h-10 rounded-full cursor-pointer"
-                                src={pinDetail.postedBy?.image}
+                                src={user?.image}
                                 alt="user-profile"
                             />
                         </Link>
