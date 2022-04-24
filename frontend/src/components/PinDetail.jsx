@@ -66,9 +66,12 @@ const PinDetail = ({ user }) => {
     return (
         <>
             <div
-                className="flex md:flex-row flex-col m-auto bg-white max-h-screen"
-                style={{ maxWidth: '1500px', borderRadius: '32px' }}>
-                <div className="flex justify-center items-center md:items-start flex-initial ">
+                className="flex xl:flex-row flex-col m-auto bg-white"
+                style={{
+                    maxWidth: '1500px',
+                    borderRadius: '32px',
+                }}>
+                <div className="flex justify-center items-center md:items-start flex-initial">
                     <img
                         src={pinDetail?.image && urlFor(pinDetail.image).url()}
                         alt="user-post"
