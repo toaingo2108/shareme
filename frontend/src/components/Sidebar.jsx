@@ -16,9 +16,9 @@ import { categories } from '../utils/data'
 // ]
 
 const isActiveStyle =
-    'flex items-center px-5 gap-3 font-extrabold border-r-2 border-black text-gray-500 transition-all duration-200 easein-out capitalize'
+    'flex items-center px-5 py-3 ml-2 gap-3 font-extrabold border-r-2 rounded-l-md border-black bg-gray-100 text-gray-500 transition-all duration-200 easein-out capitalize'
 const isNotActiveStyle =
-    'flex items-center px-5 gap-3 text-gray-500 hover:text-black transition-all duration-200 easein-out capitalize'
+    'flex items-center px-5 py-3 ml-2 gap-3 text-gray-500 rounded-l-md hover:text-black hover:bg-gray-100 transition-all duration-200 easein-out capitalize'
 
 const Sidebar = ({ user, closeToggle }) => {
     const handleCloseSidebar = () => {
@@ -26,7 +26,7 @@ const Sidebar = ({ user, closeToggle }) => {
     }
 
     return (
-        <div className="flex flex-col justify-between bg-white h-full overflow-y-scrikk min-w-210 hide-scrollbar">
+        <div className="flex flex-col justify-between bg-white h-full overflow-y-auto min-w-210 hide-scrollbar">
             <div className="flex flex-col">
                 <Link
                     to="/"
@@ -34,7 +34,7 @@ const Sidebar = ({ user, closeToggle }) => {
                     onClick={handleCloseSidebar}>
                     <img src={logo} alt="logo" className="w-full" />
                 </Link>
-                <div className="flex flex-col gap-5">
+                <div className="flex flex-col">
                     <NavLink
                         to="/"
                         // prop: isActive 'react-router-dom'
