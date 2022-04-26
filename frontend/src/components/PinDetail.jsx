@@ -66,7 +66,7 @@ const PinDetail = ({ user }) => {
     return (
         <>
             <div
-                className="flex xl:flex-row flex-col m-auto bg-white"
+                className="flex xl:flex-row flex-col m-auto bg-white drop-shadow-2xl"
                 style={{
                     maxWidth: '1500px',
                     borderRadius: '32px',
