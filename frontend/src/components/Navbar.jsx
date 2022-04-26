@@ -8,12 +8,12 @@ const Navbar = ({ searchTerm, setSearchTerm, user }) => {
     if (!user) return null
 
     return (
-        <div className="flex gap-2 md:gap-5 w-full mt-5 pb-7 bg-gray-100">
-            <div className="flex justify-start items-center w-full px-4 rounded-full bg-white border-none outline-none focus-within:shadow-sm">
+        <div className="flex gap-2 md:gap-5 w-full mt-5 pb-7 bg-white">
+            <div className="flex justify-start items-center w-full px-4 rounded-full bg-gray-100 border-none outline-none focus-within:shadow-sm">
                 <IoMdSearch fontSize={21} className="ml-1" />
                 <input
                     type="text"
-                    className="p-2 w-full bg-white outline-none"
+                    className="p-2 w-full bg-gray-100 outline-none"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     placeholder="Search"
@@ -23,11 +23,11 @@ const Navbar = ({ searchTerm, setSearchTerm, user }) => {
             <div className="flex gap-3">
                 <Link
                     to={`user-profile/${user?._id}`}
-                    className="hidden md:block">
+                    className="hidden md:block w-12 h-12">
                     <img
                         src={user.image}
                         alt="userImage"
-                        className="w-14 h-14 rounded-full"
+                        className="rounded-full"
                     />
                 </Link>
             </div>

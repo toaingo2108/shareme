@@ -59,22 +59,26 @@ const Pin = ({ pin: { postedBy, image, _id, destination, save } }) => {
                 />
                 {postHovered && (
                     <div
-                        className="absolute top-0 w-full h-full flex flex-col justify-between p-1 pr-2 pt-2 z-50 "
-                        style={{ height: '100%' }}>
+                        className="absolute top-0 w-full h-full flex flex-col justify-between p-1 pr-2 pt-2 z-50"
+                        style={{
+                            height: '100%',
+                            background:
+                                'linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4))',
+                        }}>
                         <div className="flex items-center justify-between">
                             <div className="flex gap-2">
                                 <a
                                     href={`${image?.asset?.url}?dl=`}
                                     download
                                     onClick={(e) => e.stopPropagation()}
-                                    className="bg-white w-9 h-9 rounded-full flex items-center justify-center text-dark text-xl opacity-75 hover:opacity-100 hover:shadow-md outline-none">
+                                    className="bg-white w-9 h-9 rounded-full flex items-center justify-center text-dark text-xl opacity-90 hover:opacity-100 hover:shadow-md outline-none">
                                     <MdDownloadForOffline />
                                 </a>
                             </div>
                             {alreadySaved ? (
                                 <button
                                     type="button"
-                                    className="bg-red-500 opacity-70 hover:opacity-100 text-white font-bold px-5 py-1 text-base rounded-3xl hover:shadow-md outline-none">
+                                    className="bg-red-500 opacity-90 hover:opacity-100 text-white font-bold px-5 py-1 text-base rounded-3xl hover:shadow-md outline-none">
                                     {save?.length} Saved
                                 </button>
                             ) : (
@@ -84,7 +88,7 @@ const Pin = ({ pin: { postedBy, image, _id, destination, save } }) => {
                                         savePin(_id)
                                     }}
                                     type="button"
-                                    className="bg-red-500 opacity-70 hover:opacity-100 text-white font-bold px-5 py-1 text-base rounded-3xl hover:shadow-md outline-none">
+                                    className="bg-red-500 opacity-90 hover:opacity-100 text-white font-bold px-5 py-1 text-base rounded-3xl hover:shadow-md outline-none">
                                     Save
                                 </button>
                             )}
@@ -95,7 +99,7 @@ const Pin = ({ pin: { postedBy, image, _id, destination, save } }) => {
                                     href={destination}
                                     target="_blank"
                                     rel="noreferrer"
-                                    className="bg-white flex items-center gap-2 text-black font-bold p-2 pl-4 pr-4 rounded-full opacity-70 hover:opacity-100 hover:shadow-md">
+                                    className="bg-white flex items-center gap-2 text-black font-bold p-2 pl-4 pr-4 rounded-full opacity-90 hover:opacity-100 hover:shadow-md">
                                     <BsFillArrowUpRightCircleFill />
                                     {destination.length > 15
                                         ? `${destination.slice(0, 15)}...`

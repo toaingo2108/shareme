@@ -1,15 +1,15 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { HiMenu } from 'react-icons/hi'
-import { AiFillCloseCircle } from 'react-icons/ai'
 import { Link, Routes, Route } from 'react-router-dom'
 
 import { Sidebar, UserProfile } from '../components'
 import Pins from './Pins'
 import { userQuery } from '../utils/data'
 import { client } from '../client'
+import { HiMenu } from 'react-icons/hi'
+import { AiFillCloseCircle } from 'react-icons/ai'
 import logo from '../assets/logo.png'
 import { fetchUser } from '../utils/fetchUser'
-import { IoMdAdd } from 'react-icons/io'
+import ButtonBottom from './ButtonBottom'
 
 const Home = () => {
     const [toggleSidebar, setToggleSidebar] = useState(false)
@@ -30,7 +30,7 @@ const Home = () => {
     })
 
     return (
-        <div className="flex bg-gray-100 md:flex-row flex-col h-screen transition-height duration-75 ease-out">
+        <div className="flex bg-white md:flex-row flex-col h-screen transition-height duration-75 ease-out">
             <div className="hidden md:flex h-screen flex-initial">
                 <Sidebar user={user && user} />
             </div>
@@ -79,11 +79,7 @@ const Home = () => {
                     <Route path="/*" element={<Pins user={user && user} />} />
                 </Routes>
             </div>
-            <Link
-                to={`create-pin`}
-                className="bg-black text-white rounded-full w-12 h-12 flex justify-center items-center fixed bottom-10 right-10 hover:opacity-75">
-                <IoMdAdd fontSize={25} />
-            </Link>
+            <ButtonBottom />
         </div>
     )
 }
